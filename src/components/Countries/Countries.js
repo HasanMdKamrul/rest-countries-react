@@ -25,10 +25,7 @@ const Countries = () => {
         <div>
             <h1>Countries Avaiable:{countries.length}</h1>
             {
-                countries?.map(country=> {
-                    const {name:{common},population,area} = country;
-                    return <Country name={common} population={population} area={area}></Country>
-                } )
+                countries?.map(country=> <Country country={country}></Country> )
             }
         </div>
     );
