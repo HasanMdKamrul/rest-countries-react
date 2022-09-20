@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Country from '../Country/Country';
 
 const Countries = () => {
     // ** data amader ashtew pare nau pare
@@ -24,7 +25,10 @@ const Countries = () => {
         <div>
             <h1>Countries Avaiable:{countries.length}</h1>
             {
-                countries?.map(country=> <p>Name: {country?.name?.common} </p> )
+                countries?.map(country=> {
+                    const {name:{common},population,area} = country;
+                    return <Country name={common} population={population} area={area}></Country>
+                } )
             }
         </div>
     );
