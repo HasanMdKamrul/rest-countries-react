@@ -1,17 +1,21 @@
-import { useEffect, useState } from 'react';
 import './App.css';
+import Countries from './components/Countries/Countries';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <Countries></Countries>
+      <Footer></Footer>
     </div>
   );
 }
 
 // ** First make the component
-
+/* 
 function Countries(){
   // ** 2 things can happen we can get the data or not, so obostar change hosse we need state
   const [countries,setCountries] = useState([]);
@@ -54,6 +58,6 @@ function Country({name,population}){
     </div>
   )
 }
-
+ */
 
 export default App;
