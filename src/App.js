@@ -31,11 +31,26 @@ function Countries(){
     restCountries();
   },[]);
 
-  
-
   return(
     <div>
-      <h1>Rest Countries .....</h1>
+      {
+        countries?.map(country => {
+         
+          const {name:{common},population} = country;
+
+          return <Country name={common} population={population}></Country>
+        })
+      }
+    </div>
+  )
+
+};
+
+function Country({name,population}){
+  return(
+    <div>
+      <h1>Country Name: {name}</h1>
+      <h4>Country Population: {population}</h4>
     </div>
   )
 }
